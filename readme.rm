@@ -1,68 +1,58 @@
 <div align="center">
-	<img src="https://img.icons8.com/color/96/000000/artificial-intelligence.png" alt="AI Icon" width="80"/>
-	<h1>Proyecto de Aprendizaje de Máquina - UNA PUNO</h1>
+  <img src="https://img.icons8.com/color/96/artificial-intelligence.png" width="90"/>
+  <h1>🤖 Proyecto de Aprendizaje de Máquina</h1>
+  <h3>Universidad Nacional del Altiplano – Puno</h3>
+  <p>
+    <i>Sistemas inteligentes para análisis de datos y recomendación</i>
+  </p>
 </div>
 
-## 👥 Integrantes del equipo
-| 👤 Jhon Aracayo | 👤 Juan Diego Canaza | 👤 Ximara Aquino | 👤 Vanessa Castro |
-|:--------------:|:-------------------:|:---------------:|:-----------------:|
+---
 
+## 👥 Equipo de Desarrollo
 
-## 📝 Descripción
-Este proyecto está orientado al desarrollo de sistemas de recomendación y análisis de datos utilizando técnicas de aprendizaje de máquina. El repositorio contiene scripts, modelos, una aplicación principal y una extensión para navegador web.
+| 👤 Integrante | 👤 Integrante | 👤 Integrante | 👤 Integrante |
+|:-------------:|:-------------:|:-------------:|:-------------:|
+| **Jhon Marco Aracayo Mamani** | **Juan Diego Canaza Paucara** | **Ximara Aquino Sandoval** | **Vanessa Castro Callo** |
 
+---
 
-## 🗂️ Estructura del proyecto
-```
-📦 app/                # Código principal (pipelines, recomendador, conexión a BD)
-📦 MODELOSIMPLE_minilm-l2/  # Scripts para procesamiento y modelado avanzado
-📦 scripts/            # Scripts de procesamiento, indexación y clustering
-🧩 extension/          # Extensión para navegador (JS, CSS, manifest, íconos)
-```
+## 📌 Descripción del Proyecto
 
+Este repositorio contiene el desarrollo de un **sistema de aprendizaje de máquina** orientado al **análisis de datos y recomendación inteligente**, integrando técnicas modernas de:
 
-## ⚙️ Instalación y requisitos
+- 🔍 Procesamiento de datos
+- 🧠 Modelos de *Machine Learning*
+- 🧩 Clustering y embeddings semánticos
+- 🌐 Integración con base de datos
+- 🧪 Scripts experimentales y pipelines
+- 🧩 Extensión web para interacción directa
 
-### 1️⃣ Requisitos generales
-- 🐍 Python 3.8 o superior
-- 🐳 Docker (para la base de datos Postgres)
-- 🌐 Navegador Chrome o Edge (para la extensión)
+El proyecto está diseñado con un enfoque **modular, escalable y reproducible**, ideal para investigación académica y aplicaciones reales.
 
-### 2️⃣ Instalación de dependencias Python
-Ejecuta en la raíz del proyecto:
-```bash
-pip install -r requirements.txt
-```
-Si no existe `requirements.txt`, instala manualmente:
-```bash
-pip install psycopg2 pandas scikit-learn hdbscan sentence-transformers flask
-```
+---
 
-### 3️⃣ Configuración de la base de datos
-Instala Docker y ejecuta:
-```bash
-docker-compose up -d
-```
-Esto levantará un contenedor con Postgres configurado para el proyecto.
+## 🗂️ Estructura del Proyecto
 
-### 4️⃣ Extensión de navegador
-1. Ve a la carpeta `extension/`.
-2. En el navegador, activa el modo desarrollador y carga la extensión como "carpeta descomprimida".
-	 - ![Extensión Icon](extension/icons/icon128.png)
+```text
+📦 app/
+ ┣ 📜 main.py                # Aplicación principal
+ ┣ 📜 db.py                  # Conexión a base de datos
+ ┣ 📜 recommender.py         # Lógica del sistema de recomendación
+ ┗ 📜 utils.py               # Funciones auxiliares
 
+📦 MODELOSIMPLE_minilm-l2/
+ ┣ 📦 scripts/               # Modelado, embeddings y clustering
+ ┗ 📜 README.md              # Documentación del modelo
 
-## 🚀 Ejecución de scripts
-- Los scripts principales están en `scripts/` y `MODELOSIMPLE_minilm-l2/scripts/`.
-- Para ejecutar un script:
-```bash
-python scripts/01.harvest_multi.py
-```
+📦 scripts/
+ ┣ 📜 01.harvest_multi.py    # Recolección de datos
+ ┣ 📜 02.index.py            # Indexación
+ ┗ 📜 03.cluster.py          # Clustering
 
-
-## 📬 Contacto y soporte
-Para dudas o soporte, contactar a cualquiera de los integrantes del equipo.
-
-
-## 📝 Notas
-- ✅ Asegúrate de tener todos los paquetes instalados antes de ejecutar los scripts.
-- 📖 Revisa la documentación interna de cada archivo para detalles específicos.
+🧩 extension/
+ ┣ 📜 manifest.json          # Configuración de la extensión
+ ┣ 📜 popup.html
+ ┣ 📜 popup.js
+ ┣ 📜 styles.css
+ ┗ 📦 icons/                 # Íconos de la extensión

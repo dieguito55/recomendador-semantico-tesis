@@ -1,58 +1,70 @@
-<div align="center">
-  <img src="https://img.icons8.com/color/96/artificial-intelligence.png" width="90"/>
-  <h1>🤖 Proyecto de Aprendizaje de Máquina</h1>
-  <h3>Universidad Nacional del Altiplano – Puno</h3>
-  <p>
-    <i>Sistemas inteligentes para análisis de datos y recomendación</i>
-  </p>
-</div>
+PROYECTO DE APRENDIZAJE DE MÁQUINA - UNA PUNO
+👥 INTEGRANTES DEL EQUIPO
+Jhon Aracayo
 
----
+Juan Diego Canaza
 
-## 👥 Equipo de Desarrollo
+Ximara Aquino
 
-| 👤 Integrante | 👤 Integrante | 👤 Integrante | 👤 Integrante |
-|:-------------:|:-------------:|:-------------:|:-------------:|
-| **Jhon Marco Aracayo Mamani** | **Juan Diego Canaza Paucara** | **Ximara Aquino Sandoval** | **Vanessa Castro Callo** |
+Vanessa Castro
 
----
+📝 DESCRIPCIÓN
+Este proyecto desarrolla sistemas de recomendación y análisis de datos usando técnicas de aprendizaje de máquina. Contiene scripts, modelos, aplicación principal y extensión para navegador.
 
-## 📌 Descripción del Proyecto
+🗂️ ESTRUCTURA DEL PROYECTO
+text
+📦 app/                       # Código principal
+   ├── pipelines/            # Pipelines de procesamiento
+   ├── recommendation_engine.py
+   └── database.py
+📦 MODELOSIMPLE_minilm-l2/   # Modelado avanzado
+   └── scripts/              # Scripts de procesamiento
+📦 scripts/                  # Scripts diversos
+   ├── 01.harvest_multi.py
+   ├── 02.preprocessing.py
+   └── 03.clustering.py
+🧩 extension/                # Extensión para navegador
+   ├── manifest.json
+   ├── popup.html
+   ├── background.js
+   └── icons/
+⚙️ INSTALACIÓN
+1️⃣ REQUISITOS GENERALES
+Python 3.8+
 
-Este repositorio contiene el desarrollo de un **sistema de aprendizaje de máquina** orientado al **análisis de datos y recomendación inteligente**, integrando técnicas modernas de:
+Docker (para PostgreSQL)
 
-- 🔍 Procesamiento de datos
-- 🧠 Modelos de *Machine Learning*
-- 🧩 Clustering y embeddings semánticos
-- 🌐 Integración con base de datos
-- 🧪 Scripts experimentales y pipelines
-- 🧩 Extensión web para interacción directa
+Navegador Chrome/Edge (para extensión)
 
-El proyecto está diseñado con un enfoque **modular, escalable y reproducible**, ideal para investigación académica y aplicaciones reales.
+2️⃣ INSTALAR DEPENDENCIAS PYTHON
+bash
+pip install -r requirements.txt
+Si no existe requirements.txt:
 
----
+bash
+pip install psycopg2 pandas scikit-learn hdbscan sentence-transformers flask
+3️⃣ CONFIGURAR BASE DE DATOS
+bash
+docker-compose up -d
+4️⃣ INSTALAR EXTENSIÓN
+Ir a chrome://extensions/
 
-## 🗂️ Estructura del Proyecto
+Activar "Modo desarrollador"
 
-```text
-📦 app/
- ┣ 📜 main.py                # Aplicación principal
- ┣ 📜 db.py                  # Conexión a base de datos
- ┣ 📜 recommender.py         # Lógica del sistema de recomendación
- ┗ 📜 utils.py               # Funciones auxiliares
+Cargar carpeta extension/
 
-📦 MODELOSIMPLE_minilm-l2/
- ┣ 📦 scripts/               # Modelado, embeddings y clustering
- ┗ 📜 README.md              # Documentación del modelo
+🚀 EJECUTAR SCRIPTS
+bash
+python scripts/01.harvest_multi.py
+python scripts/02.preprocessing.py
+python scripts/03.embedding_generator.py
+📬 CONTACTO
+Para dudas o soporte, contactar a cualquier integrante del equipo.
 
-📦 scripts/
- ┣ 📜 01.harvest_multi.py    # Recolección de datos
- ┣ 📜 02.index.py            # Indexación
- ┗ 📜 03.cluster.py          # Clustering
+📝 NOTAS
+✅ Verificar paquetes antes de ejecutar scripts
 
-🧩 extension/
- ┣ 📜 manifest.json          # Configuración de la extensión
- ┣ 📜 popup.html
- ┣ 📜 popup.js
- ┣ 📜 styles.css
- ┗ 📦 icons/                 # Íconos de la extensión
+📖 Revisar documentación interna de cada archivo
+
+🔄 Mantener base de datos activa con Docker
+

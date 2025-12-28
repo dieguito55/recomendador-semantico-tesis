@@ -1,0 +1,5 @@
+@"
+__pycache__/
+*.pyc
+models_semantic/
+"@ | Out-File -Encoding utf8 .gitignore

@@ -1,0 +1,20 @@
+services:
+  db:
+    image: postgres:16
+    container_name: unap_postgres
+    environment:
+      POSTGRES_USER: unap
+      POSTGRES_PASSWORD: unap123
+      POSTGRES_DB: unap_repo
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U unap -d unap_repo"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  pgdata:

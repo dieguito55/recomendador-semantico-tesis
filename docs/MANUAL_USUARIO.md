@@ -15,6 +15,12 @@ La recomendacion se basa en similitud semantica: el sistema busca documentos con
 
 ## 3. Acceso mediante API
 
+En Windows, iniciar el sistema con doble clic en:
+
+```text
+bin/INICIAR_RECOMENDADOR.cmd
+```
+
 Con la API activa, abrir:
 
 ```text

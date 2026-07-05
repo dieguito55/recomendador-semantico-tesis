@@ -79,6 +79,16 @@ FAISS GPU requiere una instalacion compatible adicional; si no esta disponible, 
 
 ## 4. Instalacion
 
+Arranque automatico en Windows:
+
+```text
+bin/INICIAR_RECOMENDADOR.cmd
+```
+
+El ejecutable crea `.env` si no existe, prepara `.venv`, instala dependencias, levanta PostgreSQL con Docker Compose e inicia Uvicorn.
+
+Instalacion manual:
+
 ```bash
 python -m venv .venv
 .venv\Scripts\activate

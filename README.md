@@ -28,6 +28,7 @@ docs/                Manuales y material para registro de software
 extension/           Extension de navegador Chromium
 models_semantic/     Artefactos generados del indice semantico
 scripts/             Pipeline de cosecha, embeddings y clustering
+bin/                 Ejecutable de arranque para Windows
 docker-compose.yml   Servicio PostgreSQL local
 requirements.txt     Dependencias Python
 .env.example         Variables de entorno de referencia
@@ -47,6 +48,16 @@ Documentacion principal:
 - Memoria suficiente para cargar el modelo semantico. GPU CUDA es opcional.
 
 ## Instalacion rapida
+
+En Windows, puede iniciar el sistema con doble clic en:
+
+```text
+bin/INICIAR_RECOMENDADOR.cmd
+```
+
+El ejecutable prepara `.env`, crea `.venv` si no existe, instala dependencias, levanta PostgreSQL e inicia la API en `http://localhost:8000`.
+
+Instalacion manual:
 
 1. Crear entorno virtual e instalar dependencias:
 

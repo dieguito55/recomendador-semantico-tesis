@@ -1,26 +1,32 @@
 {
   "manifest_version": 3,
-  "name": "UNAP Research AI",
-  "version": "4.1.0",
-  "description": "Asistente de investigación inteligente con indexación semántica.",
-  "action": { "default_title": "Abrir UNAP AI" },
-
+  "name": "Recomendador Semantico de Tesis",
+  "version": "1.0.0",
+  "description": "Asistente de investigacion inteligente con indexacion semantica.",
+  "action": {
+    "default_title": "Abrir recomendador semantico"
+  },
   "icons": {
     "16": "icons/icono.png",
     "32": "icons/icono.png",
     "48": "icons/icono.png",
     "128": "icons/icono.png"
   },
-
-  "permissions": ["storage", "activeTab", "scripting"],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
   "host_permissions": [
     "https://repositorio.unap.edu.pe/*",
     "https://repositorio.unsa.edu.pe/*",
     "https://repositorio.unsaac.edu.pe/*",
-    "http://localhost:8000/*",
-    "http://127.0.0.1:8000/*"
+    "https://tamoil13-unap-research-ml.hf.space/*",
+    "http://localhost:8000/*"
   ],
-  "background": { "service_worker": "service_worker.js" },
+  "background": {
+    "service_worker": "service_worker.js"
+  },
   "content_scripts": [
     {
       "matches": [
@@ -28,8 +34,12 @@
         "https://repositorio.unsa.edu.pe/*",
         "https://repositorio.unsaac.edu.pe/*"
       ],
-      "js": ["content.js"],
-      "css": ["panel.css"],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "panel.css"
+      ],
       "run_at": "document_idle"
     }
   ]

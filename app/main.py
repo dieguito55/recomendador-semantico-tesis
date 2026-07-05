@@ -8,11 +8,18 @@ from pydantic import BaseModel
 from app.db import get_conn
 from app.recommender import Recommender
 
-app = FastAPI(title="UNAP Recommender API", version="2.1")
+app = FastAPI(title="UNAP Recommender API", version="1.0.0")
+
+def get_allowed_origins():
+    raw = os.getenv("ALLOWED_ORIGINS", "*").strip()
+    if raw == "*":
+        return ["*"]
+    return [origin.strip() for origin in raw.split(",") if origin.strip()]
+
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],   
+    allow_origins=get_allowed_origins(),
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],

@@ -4,13 +4,6 @@ Software academico para cosechar, indexar, agrupar y recomendar tesis universita
 
 El sistema integra una API en FastAPI, una base de datos PostgreSQL, scripts de procesamiento semantico y una extension de navegador para consultar recomendaciones dentro de repositorios institucionales compatibles.
 
-## Autores
-
-- Jhon Aracayo
-- Juan Diego Canaza
-- Ximara Aquino
-- Vanessa Castro
-
 ## Objetivo
 
 Facilitar la exploracion de trabajos academicos relacionados a partir de un titulo, resumen, texto de consulta o tesis abierta en el navegador. El sistema compara significado semantico, no solo coincidencias exactas de palabras.
